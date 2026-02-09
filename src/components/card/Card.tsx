@@ -23,9 +23,9 @@ export default function Card({
 }: CardProps) {
   return (
     <article className={styles.card}>
-      {/* Sección de especificaciones del carro */}
+      
       <section>
-        {/* Contenedor de la marca y el sello */}
+
         <div className={styles.headerContainer}>
           <div className={styles.brandContainer}>
             <div className={styles.ratingContainer}>
@@ -112,18 +112,18 @@ export default function Card({
         </div>
       </section>
       <hr className={styles.cardSeparator} />
-      {/* Sección de detalles */}
+      
       <section className={styles.detailsSection}>
-        {/* Contenedor de los detalles */}
+        
         <div className={styles.generalContainer}>
-          {/* Contenedor de info sobre seguros */}
+          
           <div className={styles.insuranceContainer}>
-            {/* Apartado de todo incluido */}
+            
             <div className={styles.insuranceGeneral}>
               <span className={styles.insuranceIncluded}>Con seguros</span>
               <h5 className={styles.allIncluded}><span className={styles.hiddenHyphen}>-</span> Todo incluido</h5>
             </div>
-            {/* Apartado de los seguros incluidos */}
+            
             <div className={styles.allInsurances}>
               <div className={styles.insuranceDetails}>
                 <Image
@@ -184,16 +184,16 @@ export default function Card({
           </div>
         </div>
 
-        {/* Contenedor en caso de no querer seguro */}
+        
 
         <div className={styles.noInsuranceContainer}>
-          {/* Apartado de todo incluido */}
+          
           <div>
             <div className={styles.insuranceGeneral}>
               <span className={styles.noInsuranceText}>Sin Seguros</span>
               <h5 className={styles.allIncluded}><span className={styles.hiddenHyphen}>-</span>Tarifa básica</h5>
             </div>
-            {/* Apartado de los seguros incluidos */}
+            
 
             <div className={styles.allInsurances}>
               <div className={styles.insuranceDetails}>
@@ -234,7 +234,7 @@ export default function Card({
           </div>
         </div>
 
-        {/* Contenedor de los botones */}
+      
         <footer className={styles.buttonsContainer}>
           <div className={styles.seeDetails}>
             <span>Ver detalles</span>

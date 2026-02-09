@@ -21,12 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={poppins.variable} suppressHydrationWarning> 
-    <head>
-      
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
+    <html lang="es" className={poppins.variable} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
       (() => {
         const theme = localStorage.getItem("theme");
         if (theme === "dark") {
@@ -34,11 +33,9 @@ export default function RootLayout({
         }
       })();
     `,
-  }}
-/>
-
-
-    </head>
+          }}
+        />
+      </head>
       <body>
         <Header />
         <main> {children} </main>

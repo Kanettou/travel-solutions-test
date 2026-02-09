@@ -12,7 +12,6 @@ export function useTheme() {
     return savedTheme === "dark" ? "dark" : "light";
   });
 
-  // Solo sincroniza efectos externos (DOM + storage)
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);

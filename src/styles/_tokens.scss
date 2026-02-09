@@ -1,5 +1,5 @@
 :root {
-  /* Background colors */
+
   --cards-background: #FFF;
   --body-background: #f2f3f9;
   --filter-background: #e8f2ff;
@@ -15,7 +15,6 @@
   --brand-separator: #e3e5e9;
   --recommendation-background: #f0f5ff;
   --offert-background: #8154ef;
-  /* Font colors */
 
   --titles-color: #150a44;
   --details-color: #606a82;
@@ -25,46 +24,33 @@
   --recomendation-color: #0d55ff;
   --discount-text: #ffffff;
 
-  /* Font family */
-
   --font-primary: var(--font-poppins), system-ui, -apple-system, sans-serif;
-
-  /* Font sizes */
 
   --text-sm: 12px;
   --text-md: 14px;
   --text-lg: 16px;
 
-  /* Font weights */
-
   --font-medium: 400;
   --font-semibold: 600;
   --font-bold: 700;
 
-  /* Card vars */
-
   --card-padding: 22px 16px 16px 22px;
   --card-borderRadius: 15px;
 
-  /* Border vars */
   --button-borderColor: none;
   --button-borderRadius: 0.625rem;
-
-  /* Gap sizes */
 
   --gap-xs: 3px;
   --gap-sm: 5px;
   --gap-md: 10px;
   --gap-lg: 15px;
 
-  /* Magin sizes */
 
   --margin-nn: 0px;
   --margin-sm: 5px;
   --margin-md: 10px;
   --margin-lg: 15px;
 
-  /* Icon caracteristics*/
 
   --iconHeight-sm: 18px;
   --iconWidth-sm: 18px;
