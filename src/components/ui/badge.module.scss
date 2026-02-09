@@ -1,0 +1,16 @@
+@use "@/styles/mixins" as m;
+
+.badgeStyle {
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    border-radius: 6px;
+
+    padding: 2px 8px 2px 8px;
+
+    @include m.font-config(
+    var(--font-bold),
+    14px,
+    normal,
+  );
+}

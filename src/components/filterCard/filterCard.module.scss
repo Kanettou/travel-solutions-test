@@ -1,0 +1,40 @@
+@use "@/styles/_mixins" as m;
+
+.cardContainer {
+  display: none;
+
+  background: var(--cards-background);
+  padding: 20px;
+
+  max-width: 250px;
+  max-height: 350px;
+
+  @include m.responsive(lg) {
+    @include m.flex-config(column, flex-start, start);
+    gap: 16px;
+    border-radius: 20px;
+  }
+}
+
+.filterText {
+  @include m.font-config(var(--font-bold), 24px, normal, var(--titles-color));
+}
+
+.specsGroup {
+  @include m.flex-config(column, start, start);
+  gap: 15px;
+}
+
+.specPack {
+  @include m.flex-config(row, space-between, center);
+  gap: var(--gap-sm);
+}
+
+.specsText {
+  @include m.font-config(
+    var(--font-semibold),
+    14px,
+    normal,
+    var(--details-color)
+  );
+}

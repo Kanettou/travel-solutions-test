@@ -1,0 +1,15 @@
+@use "@/styles/_tokens";
+@use "@/styles/_variables";
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: var(--margin-nn);
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  margin: var(--margin-nn);
+  background: var(--body-background);
+  max-width: 100vw;
+  overflow-x: hidden;
+}

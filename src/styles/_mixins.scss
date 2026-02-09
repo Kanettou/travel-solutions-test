@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "../styles/breakpoints" as b;
+
+@mixin button-style($background: var(--buttonGradient-background)){
+  border: var(--button-borderColor);
+  background: $background;
+  border-radius: var(--button-borderRadius);
+  padding: 6px 10px 6px 10px;
+}
+
+@mixin flex-config($direction: row, $justify: space-between, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  
+}
+
+@mixin font-config ($weight: var(--font-medium), $size: var(--text-md), $style: normal, $color: black) {
+  font-family: var(--font-primary);
+  font-weight: $weight;
+  font-size: $size;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin button-invisible(){
+  border: none;
+  background: none;
+  padding: 0px;
+  
+}
+
+@mixin responsive($bp) {
+  @if map.has-key(b.$breakpoints, $bp){
+    @media (min-width: map.get(b.$breakpoints, $bp)){
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$bp} no existe"
+  }
+}

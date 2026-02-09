@@ -1,0 +1,73 @@
+@use "@/styles/_mixins" as m;
+
+.filterContainer {
+  @include m.flex-config(row, space-between, center);
+  background: var(--filter-background);
+  padding: 10px 15px 10px 15px;
+
+  @include m.responsive(lg){
+    padding: 10px 60px 10px 60px
+  }
+}
+
+.lefContainer {
+  @include m.flex-config(column, flex-start, center);
+}
+
+.filterClasification {
+  @include m.font-config(var(--font-bold), 18px, normal, var(--titles-color));
+}
+
+.filterResults {
+  @include m.font-config(
+    var(--font-semibold),
+    12px,
+    italic,
+    var(--extraDetails-color)
+  );
+}
+
+.rightContainer {
+  @include m.flex-config(column, center, end);
+}
+
+.topText {
+  @include m.flex-config(row, center, center);
+  gap: var(--gap-xs);
+}
+
+.filterExtra {
+  @include m.font-config(
+    var(--font-semibold),
+    14px,
+    normal,
+    var(--blue-filters)
+  );
+}
+
+.fromText {
+  @include m.font-config(
+    var(--font-semibold),
+    14px,
+    normal,
+    var(--extraDetails-color)
+  );
+}
+
+.bottomText {
+  @include m.flex-config(row, end, center);
+  gap: var(--gap-xs);
+}
+
+.priceFilter {
+  @include m.font-config(var(--font-bold), 18px, normal, var(--titles-color));
+}
+
+.rateText {
+  @include m.font-config(
+    var(--font-medium),
+    12px,
+    normal,
+    var(--extraDetails-color)
+  );
+}

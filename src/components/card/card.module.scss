@@ -1,0 +1,409 @@
+@use "@/styles/_mixins" as m;
+@use "@/styles/_variables" as v;
+.card {
+  background: var(--cards-background);
+  border-radius: var(--card-borderRadius);
+  padding: var(--card-padding);
+
+  @include m.flex-config(column, space-between, stretch);
+
+  @include m.responsive(md) {
+    flex-direction: row;
+    gap: var(--gap-lg);
+  }
+}
+
+.headerContainer {
+  @include m.flex-config(row, space-between, center);
+}
+
+.brandContainer {
+  @include m.flex-config(column, center, center);
+  gap: var(--gap-md);
+}
+
+.carContainer {
+  @include m.flex-config(row, flex-start, center);
+  gap: var(--gap-md);
+}
+
+.carDetails {
+  @include m.flex-config(column, space-between, stretch);
+  gap: var(--gap-sm);
+}
+
+.carSpecs {
+  @include m.flex-config(row, space-between, center);
+
+  gap: var(--gap-lg);
+}
+
+.specPack {
+  @include m.flex-config(row, space-between, center);
+  gap: var(--gap-sm);
+}
+
+.specsText {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--details-color)
+  );
+}
+
+.ratingContainer {
+  @include m.flex-config(row, space-between, center);
+  gap: var(--gap-sm);
+}
+
+.airportContainer {
+  @include m.flex-config(row, space-between, center);
+  gap: var(--gap-sm);
+}
+
+.generalContainer {
+  @include m.flex-config;
+  @include m.responsive(lg) {
+    @include m.flex-config(row, space-between, center);
+    gap: var(--gap-lg);
+  }
+}
+
+.filterText {
+  display: none;
+  @include m.responsive(lg) {
+    display: block;
+    @include m.font-config(var(--font-bold), 24px, normal, var(--titles-color));
+  }
+}
+
+.detailsSection {
+  @include m.flex-config(column, space-between, stretch);
+  gap: var(--gap-md);
+}
+
+.pricingContainer {
+  @include m.flex-config(column, space-between, end);
+}
+
+.insuranceContainer {
+  @include m.flex-config(column, space-around, start);
+  gap: var(--gap-md);
+}
+
+.priceAndButton {
+  @include m.responsive(lg) {
+    @include m.flex-config(row, end, center);
+  }
+}
+
+.noInsuranceContainer {
+  display: none;
+
+  @include m.responsive(lg) {
+    display: block;
+
+    @include m.flex-config(row, space-between, center);
+  }
+}
+
+.noInsuranceText {
+  @include m.font-config(var(--font-bold), 18px, normal, var(--titles-color));
+}
+
+.noFeeText {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--extraDetails-color)
+  );
+}
+
+.seeDetailsHidden {
+  display: none;
+  @include m.responsive(lg) {
+    @include m.flex-config(row, start, center);
+    gap: var(--gap-sm);
+    @include m.font-config(
+      var(--font-semibold),
+      var(--text-sm),
+      normal,
+      var(--extraDetails-color)
+    );
+  }
+}
+
+.detailsHide {
+  @include m.responsive(lg) {
+    @include m.flex-config(row, start center);
+    gap: var(--gap-lg);
+  }
+}
+
+.insuranceGeneral {
+  @include m.flex-config(column, flex-start, start);
+
+  @include m.responsive(lg) {
+    @include m.flex-config(row, center, center);
+    gap: var(--gap-sm);
+  }
+}
+
+.allInsurances {
+  @include m.flex-config(column, start, start);
+  gap: var(--gap-sm);
+
+  @include m.responsive(lg) {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.insuranceDetails {
+  @include m.flex-config(row, start, center);
+  gap: var(--gap-sm);
+}
+
+.discountContainer {
+  @include m.flex-config(row, end, center);
+  gap: var(--gap-sm);
+}
+
+.totalContainer {
+  @include m.flex-config(column, end, end);
+}
+
+.partialTotalContainer {
+  @include m.flex-config(row, end, center);
+  gap: var(--gap-sm);
+}
+
+.buttonsContainer {
+  @include m.flex-config(row, space-between, center);
+  gap: var(--gap-md);
+}
+
+.insuranceIncluded {
+  @include m.font-config(var(--font-bold), 18px, normal, var(--blue-filters));
+}
+.ginsurance {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--insurance-details)
+  );
+}
+
+.ubicationText {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--details-color)
+  );
+}
+
+.ratingText {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-md),
+    normal,
+    var(--details-color)
+  );
+}
+
+.carModel {
+  @include m.font-config(var(--font-bold), 16px, normal, var(--titles-color));
+}
+
+.alike {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--blue-filters)
+  );
+}
+
+.allIncluded {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--details-color)
+  );
+}
+
+.partialTotal {
+  @include m.font-config(var(--font-bold), 18px, normal, var(--titles-color));
+}
+.total {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--details-color)
+  );
+}
+
+.extraDetails {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--extraDetails-color)
+  );
+}
+
+.originalPrice {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--extraDetails-color)
+  );
+  text-decoration: line-through;
+  text-decoration-color: var(--extraDetails-color);
+}
+
+.seeDetails {
+  @include m.flex-config(row, start, center);
+  gap: var(--gap-sm);
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-sm),
+    normal,
+    var(--extraDetails-color)
+  );
+}
+
+.textButton {
+  padding: 3px;
+}
+
+.reserveButton {
+  @include m.button-style;
+  @include m.font-config(var(--font-semibold), var(--text-md), normal, white);
+
+  @include m.responsive(lg) {
+    display: none;
+  }
+}
+
+.buttonsExtra {
+  display: none;
+
+  @include m.responsive(lg) {
+    @include m.flex-config(column, space-evenly, center);
+    padding: 3px;
+  }
+}
+
+.secondTextButton {
+  padding: 6px;
+  @include m.font-config(var(--font-semibold), var(--text-md), normal, white);
+}
+
+.secondReserveButton {
+  @include m.button-style;
+}
+
+.extraTextButton {
+  @include m.font-config(
+    var(--font-semibold),
+    var(--text-md),
+    normal,
+    var(--blue-filters)
+  );
+  border: var(--button-borderColor);
+  border-style: solid;
+  border-color: var(--blue-filters);
+  border-width: 2px;
+  border-radius: var(--button-borderRadius);
+  padding: 6px;
+}
+
+.extraButton {
+  @include m.button-style(white);
+}
+
+.brandSeparator {
+  color: var(--brand-separator);
+}
+
+.carStyle {
+  @include m.responsive(lg) {
+    width: 220px;
+    height: 115px;
+  }
+}
+
+.triangleDesign {
+  @include m.font-config(
+    var(--font-bold),
+    var(--text-md),
+    normal,
+    var(--discount-text)
+  );
+  background: var(--discount-background);
+  clip-path: polygon(100% 0%, 80% -10%, 0% 40%, 0% 60%, 80% 110%, 100% 100%);
+
+  padding-left: 4px;
+  padding-right: 3px;
+}
+
+.discountBackground {
+  @include m.font-config(
+    var(--font-bold),
+    var(--text-md),
+    normal,
+    var(--discount-text)
+  );
+  background: var(--discount-background);
+  padding-right: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cardSeparator {
+  border: none;
+  height: 1px;
+  margin-top: var(--margin-lg);
+  margin-bottom: var(--margin-lg);
+  background-color: var(--card-separator);
+
+  @include m.responsive(lg) {
+    height: auto;
+    width: 1px;
+    margin: 0px;
+  }
+}
+
+.airplaneIcon {
+  height: var(--iconHeight-sm);
+  width: var(--iconWidth-sm);
+  color: var(--blue-filters);
+  transform: rotate(270deg);
+}
+
+.arrowIcon {
+  height: var(--iconHeight-sm);
+  width: var(--iconWidth-sm);
+  color: var(--details-color);
+}
+
+.hiddenHyphen {
+  display: none;
+  @include m.responsive(lg) {
+    display: inline;
+  }
+}
+
+.starIcon {
+  height: var(--iconHeight-sm);
+  width: var(--iconWidth-sm);
+  color: var(--calification-background);
+}

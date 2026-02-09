@@ -1,0 +1,179 @@
+@use "@/styles/_mixins" as m;
+
+.header {
+  @include m.flex-config(row, space-between, center);
+  padding: 35px 15px 10px 15px;
+  background: var(--cards-background);
+  @include m.responsive(lg) {
+    padding: 10px 60px 10px 60px;
+  }
+}
+
+.options {
+  min-width: 100px;
+  @include m.flex-config(row, space-between, center);
+  gap: 20px;
+}
+
+.separator {
+  display: none;
+
+  @include m.responsive(lg) {
+    display: block;
+    color: var(--card-separator);
+  }
+}
+
+.iconPack {
+  @include m.flex-config(row, space-between, center);
+  gap: 5px;
+}
+
+.selectTexts {
+  @include m.font-config(var(--font-bold), 14px, normla, var(--titles-color))
+}
+
+.iconsName {
+  display: none;
+  @include m.font-config(var(--font-semibold), 12px, normal, var(--titles-color));
+  @include m.responsive(lg) {
+    display: block;
+  }
+}
+
+.helpIcon {
+  display: none;
+
+  @include m.responsive(lg) {
+    display: block;
+  }
+}
+
+.iconButton{
+    @include m.button-invisible;
+    @include m.font-config()
+}
+
+.dropMenu {
+  position: relative;
+  @include m.flex-config(row, space-between, center);
+}
+
+.moneyMenu {
+  background: var(--cards-background);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+
+  /* Mobile default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  @include m.flex-config(column, start, start);
+  width: 250px;
+    gap: 15px;
+
+  @include m.responsive(lg) {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.languagesMenu {
+  background: var(--cards-background);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+
+  /* Mobile default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include m.flex-config(column, start, start);
+  width: 250px;
+    gap: 15px;
+  @include m.responsive(lg) {
+    
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.countryContainer {
+    @include m.flex-config(column, center, end);
+    gap: 15px
+}
+
+.countryPack{
+    @include m.flex-config(row, start, center);
+    gap: 5px;
+}
+
+.countrySelector {
+    align-self: end;
+    @include m.flex-config(row, space-between, center);
+    background: var(--body-background);
+    width: 190px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.optionsMenu {
+  border: none;
+  background: var(--cards-background);
+  align-self: start;
+  @include m.font-config(var(--font-bold), 16px, normal, var(--details-color));
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+
+  @include m.responsive(lg) {
+    display: none;
+  }
+}
+
+.themeToggle {
+  all: unset;
+  cursor: pointer;
+
+  width: 60px;
+  height: 20px;
+  border-radius: 5px;
+
+  @include m.flex-config(row, center, center);
+  @include m.font-config(var(--font-bold), 12px, normal, var(--titles-color));
+  background: var(--filter-background);
+  
+
+  transition: background 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+.arrowIcon {
+  height: var(--iconHeight-sm);
+  width: var(--iconWidth-sm);
+  color: var(--details-color);
+  rotate: 90deg;
+}

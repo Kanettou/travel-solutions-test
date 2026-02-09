@@ -1,0 +1,28 @@
+@use "@/styles/_mixins" as m;
+
+.main{
+  @include m.flex-config(column, space-between, stretch);
+  margin: var(--margin-md);
+  gap: var(--gap-lg);
+  
+  
+}
+
+.generalContainer {
+  @include m.flex-config(column, space-between, stretch);
+  gap: var(--gap-lg);
+
+  @include m.responsive(lg) {
+    
+    @include m.flex-config(row, space-evenly, start)
+  }
+}
+
+.cardsContainer {
+  @include m.flex-config(column, space-between, center);
+  gap: 15px;
+
+  @include m.responsive(lg) {
+    align-items: start;
+  }
+}
