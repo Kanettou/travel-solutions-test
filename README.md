@@ -29,9 +29,9 @@ Está construido con **Next.js**, **React**, **SCSS** y utiliza **mixins y varia
 
 En bash ejecute lo siguiente:
 
-git clone https://github.com/tu-usuario/nombre-del-repo.git
+git clone https://github.com/Kanettou/travel-solutions-test.git
 
-cd nombre-del-repo
+cd travel-solutions-test
 
 2. Instale las dependencias
 
